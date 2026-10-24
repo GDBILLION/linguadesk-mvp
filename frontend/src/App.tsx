@@ -175,7 +175,7 @@ export default function App() {
           <div><div className="eyebrow">WORKSPACE</div><h1>Inbox <span className="count-pill">{filteredCount}</span></h1></div>
           <button className="icon-button" title="New conversation"><Plus size={18} /></button>
         </div>
-        <div className="search-box"><Search size={16} /><input value={search} onChange={setSearch} placeholder="Search conversations..." /><kbd>⌘ K</kbd></div>
+        <div className="search-box"><Search size={16} /><input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search conversations..." /><kbd>⌘ K</kbd></div>
         <div className="filter-row">
           <button className={`filter-chip ${statusFilter === 'all' ? 'selected' : ''}`} onClick={() => setStatusFilter('all')}>All</button>
           <button className={`filter-chip ${statusFilter === 'open' ? 'selected' : ''}`} onClick={() => setStatusFilter('open')}>Open</button>
